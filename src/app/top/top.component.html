@@ -1,0 +1,101 @@
+<div class="conttent_wrap container-fluid">
+    <h1>Funny Guy Concert List</h1>
+    <section class="container-fluid">
+        <h2 class="filter_title">Define target</h2>
+        <div class="err-message">{{ model.errorMsg }}</div>
+        <div class="filter_by_title_area">
+            <form *ngIf="active" #selectListForm="ngForm">
+                <ul class="filter_list">
+                    <li *ngFor="let concert of concertArray; let i=index">
+                        <label>
+                            <input type="checkbox" [class.selected]="concert === getConcert"
+                                   (click)="setSelect($event.target, concert, i)">
+                            <img [src]="concert.title.logo_image_url" [alt]="concert.title.logo_alt">
+                        </label>
+                    </li>
+                </ul>
+                <div class="btn_filter">
+                    <button (click)="getSelected($event.target)" [disabled]="!selectListForm.form.valid">Get target</button>
+                </div>
+            </form>
+        </div>
+        <div [hidden]="!submitted" class="result-table">
+            <div class="current-month-list">
+                <span>{{ model.showCurrentYearMonth }}</span>
+                <table class="event_list">
+                    <thead>
+                    <tr>
+                        <th class="event_date">Date (JST)</th>
+                        <th class="event_title">Funny Guy Pic</th>
+                        <th class="event_name">Concert Title</th>
+                        <th class="event_place">Place</th>
+                        <th class="event_detail">Detail</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let getConcert of getCurrentConcerts; let i=index">
+                        <td *ngIf="getConcert" class="event_date">{{ getConcert[0].date }}</td>
+                        <td class="event_title"><img [src]=getConcert[0].path></td>
+                        <td class="event_name">{{ getConcert[0].title }}</td>
+                        <td class="event_place">{{ getConcert[0].place }}</td>
+                        <td class="event_detail">
+                            <button class="table_inner_btn" (click)="gotoDetail(getConcert[0].title)">Detail</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="future-list">
+                <span>Future Concert</span>
+                <table class="event_list">
+                    <thead>
+                    <tr>
+                        <th class="event_date">Date (JST)</th>
+                        <th class="event_title">Funny Guy Pic</th>
+                        <th class="event_name">Concert Title</th>
+                        <th class="event_place">Place</th>
+                        <th class="event_detail">Detail</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let getConcert of getNextConcerts; let i=index">
+                        <td *ngIf="getConcert" class="event_date">{{ getConcert[0].date }}</td>
+                        <td class="event_title"><img [src]=getConcert[0].path></td>
+                        <td class="event_name">{{ getConcert[0].title }}</td>
+                        <td class="event_place">{{ getConcert[0].place }}</td>
+                        <td class="event_detail">
+                            <button class="table_inner_btn" (click)="gotoDetail(getConcert[0].title)">Detail</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="past-concert-list">
+                <span>Past Concert</span>
+                <table class="event_list">
+                    <thead>
+                    <tr>
+                        <th class="event_date">Date (JST)</th>
+                        <th class="event_title">Funny Guy Pic</th>
+                        <th class="event_name">Concert Title</th>
+                        <th class="event_place">Place</th>
+                        <th class="event_detail">Detail</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let getConcert of getPastConcerts; let i=index">
+                        <td *ngIf="getConcert" class="event_date">{{ getConcert[0].date }}</td>
+                        <td class="event_title"><img [src]=getConcert[0].path></td>
+                        <td class="event_name">{{ getConcert[0].title }}</td>
+                        <td class="event_place">{{ getConcert[0].place }}</td>
+                        <td class="event_detail">
+                            <button class="table_inner_btn" (click)="gotoDetail(getConcert[0].title)">Detail</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</div>
+

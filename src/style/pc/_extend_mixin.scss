@@ -1,0 +1,46 @@
+%clearfix{
+  *zoom: 1;
+  &:after {
+    content: " ";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+    overflow: hidden;
+    font-size: 0.1em;
+    line-height: 0;
+  } 
+}
+%btn_action{
+  border-radius: 5px;
+  background-color:  #bb0f57;
+  width: 280px;
+  color: #fff;
+  height:45px;
+  margin: 30px auto 0;
+  display: block;
+  font-size: 15px;
+  padding: 12px 0px;
+  text-align:center;
+  text-decoration: none;
+  &.is_dashboard {
+    background:#4a4a4a;
+    &:hover {
+      background: #2B2B2B;
+    }
+  }
+  &.is_edit {
+    border-radius:0px;
+    width:60px;
+    height:20px;
+    padding:5px 10px;
+    display:inline-block;
+    margin-top: 0px;
+    font-size:12px;
+    line-height:12px;
+    float:right;
+  }
+  &:hover {
+    background: #92033F;
+  }
+}

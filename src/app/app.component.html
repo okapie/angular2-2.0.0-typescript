@@ -1,0 +1,19 @@
+<header>
+  <section class="header_inner">
+    <h1 class="logo">
+      <a [routerLink]="['/']" (click)="refreshPage()"><img src="images/logo.jpg" alt="Logo"></a>
+      Funny Guy World
+    </h1>
+  </section>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>
+<footer>
+  <div class="container-fluid">
+    <p class="subfooter">
+      Copyright (C) okapie All Rights Reserved.
+    </p>
+  </div>
+</footer>
+

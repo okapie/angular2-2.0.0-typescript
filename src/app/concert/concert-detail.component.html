@@ -1,0 +1,30 @@
+<div class="conttent_wrap container-fluid">
+  <h2 class="event_title">{{ concertTitle }}</h2>
+  <div><img [src]="model.concertImage" [alt]="model.concertAlt"></div>
+  <section class="container-fluid">
+    <div [hidden]="submitted">
+      <div class="event_detail_text">
+        <p>{{ model.concertTitle }} detail.</p>
+      </div>
+      <form *ngIf="active">
+        <table class="event_list">
+          <thead>
+          <tr>
+            <th class="event_date">Date (JST)</th>
+            <th class="event_place">Place</th>
+            <th class="event_detail">Deadline (JST)</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td class="event_date">{{ model.concertDate }}</td>
+            <td class="event_place">{{ model.city }}</td>
+            <td class="event_detail">{{ model.tempDeadLineDate }}{{ model.deadlineInfo }}</td>
+          </tr>
+          </tbody>
+        </table>
+        <input type="reset" class="btn_back" value="Top" (click)="goBack()">
+      </form>
+    </div>
+  </section>
+</div>

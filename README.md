@@ -1,4 +1,4 @@
-# angular2-rc4-typescript
+# angular2-2.0.0-typescript
 
 ## How to build
 

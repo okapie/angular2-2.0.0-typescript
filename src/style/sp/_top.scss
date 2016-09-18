@@ -1,0 +1,47 @@
+@media screen and (max-width:767px) {  
+    h2.filter_title{
+      font-size: 14px;
+      padding: 20px 10px 10px;
+      margin-bottom: 0;
+    }
+    .filter_by_title_area{
+      margin-bottom: 20px;
+    }
+    .filter_list{
+      width: 100%;
+      padding: 10px;
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+      li{
+        width: 45%;
+        padding-left: 30px;
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+        margin: 0 0 10px;
+        position: relative;
+      }
+      img{
+        width: 100%;
+      }
+      input{
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        margin-top: -5px;
+      }
+    }
+    .btn_filter{
+      position: static;
+      top: 0;
+      width: 100%;
+      padding: 0;
+      display: block;
+      border: none;
+      margin: 0;
+      button{
+        width: 100%;
+      }
+    }
+}

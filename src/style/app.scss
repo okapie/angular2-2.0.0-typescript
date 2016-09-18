@@ -1,0 +1,15 @@
+// styles in src/style directory are applied to the whole page
+@charset "UTF-8";
+body {
+  background: #0a68b4;
+}
+a {
+}
+
+@import 'bootstrap.css';
+@import 'normarize';
+@import 'pc/extend_mixin';
+@import 'pc/common';
+@import 'pc/top';
+@import 'sp/common';
+@import 'sp/top';
