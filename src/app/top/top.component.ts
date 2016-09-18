@@ -5,6 +5,7 @@ import { Concert } from '../concert/concert';
 import { ConcertService } from '../services/concert.service';
 import { DateService } from '../services/date.service';
 
+// FIXME 'Module not found' error occurred.
 declare var jQuery: JQueryStatic;
 
 @Component({
