@@ -70,18 +70,18 @@ export class ConcertDetailComponent implements OnInit {
 						let hourStr: string;
 						let minStr: string;
 						if (hour < 10) {
-							hourStr = `0{hour}`;
+							hourStr = `0${hour}`;
 						} else {
 							hourStr = hour.toString();
 						}
 						if (min < 10) {
-							minStr = `0{min}`;
+							minStr = `0${min}`;
 						} else {
 							minStr = min.toString();
 						}
 
-						let tempDate = `{concertYear}/{concertMonth}/{concertDay}`;
-						let tempDeadLineDate = `{endConcertYear}/{endConcertMonth}/{endConcertDay} {hourStr}:{minStr}`;
+						let tempDate = `${concertYear}/${concertMonth}/${concertDay}`;
+						let tempDeadLineDate = `${endConcertYear}/${endConcertMonth}/${endConcertDay} ${hourStr}:${minStr}`;
 
 						if (currentYear > endConcertYear) {
 							this.model.deadlineInfo = ' Already closed applications...';
