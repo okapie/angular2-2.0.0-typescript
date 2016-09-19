@@ -2,18 +2,6 @@
 
 ## How to build
 
-I use json-server as a fake API.
-
-In this case, json-server is used for listing "Funny guy" character.
-
-Don't try to run with "npm run json-server" because it doesn't work currently.
-
-Try to run the following command.
-
-```
-sudo json-server --port 2050 test/fixture/db.json
-```
-
 Webpack has a web server called webpack-dev-server.
 
 when we run the webpack command, webpack run dev server.
@@ -24,6 +12,18 @@ From the command line, run the following command.
 
 ```
 npm run server
+```
+
+I also use json-server as a fake API.
+
+In this case, json-server is used for listing "Funny guy" character.
+
+Don't try to run with "npm run json-server" because it doesn't work currently.
+
+Try to run the following command.
+
+```
+sudo json-server --port 2050 test/fixture/db.json
 ```
 
 ## Author
