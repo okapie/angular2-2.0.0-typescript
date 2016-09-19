@@ -6,4 +6,4 @@
 
 * jQuery 'module not found error' occurred.
 
-It seems that typings registry specified in typings.json was deprecated ten days ago.
+	* It seems that typings registry specified in typings.json was deprecated ten days ago.
